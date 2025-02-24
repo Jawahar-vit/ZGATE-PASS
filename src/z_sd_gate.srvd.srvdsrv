@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service definition'
+define service Z_SD_GATE {
+  expose Z_C_GATE as GATEPASS;
+}

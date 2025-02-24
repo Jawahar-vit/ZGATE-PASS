@@ -1,0 +1,128 @@
+@Metadata.layer : #CUSTOMER
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.label:'Gate Entry Pass'
+annotate entity Z_C_GATE
+    with 
+{
+    @EndUserText.label: 'PurchaseOrder'
+  @UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @UI.identification: [ {
+    position: 10 , 
+    label: 'PurchaseOrder'
+  } ]
+  @UI.lineItem: [ {
+    position: 10 , 
+    label: 'PurchaseOrder'
+  } ]
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+  PurchaseOrder;
+  
+  @EndUserText.label: 'GateEntryNo'
+  @UI.identification: [ {
+    position: 20 , 
+    label: 'GateEntryNo'
+  } ]
+  @UI.lineItem: [ {
+    position: 20 , 
+    label: 'GateEntryNo'
+  } ]
+  @UI.selectionField: [ {
+    position: 20 
+  } ]
+  GateEntryNo;
+  
+  @EndUserText.label: 'VehicleNum'
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'VehicleNum'
+  } ]
+  @UI.lineItem: [ {
+    position: 30 , 
+    label: 'VehicleNum'
+  } ]
+  @UI.selectionField: [ {
+    position: 30 
+  } ]
+  VehicleNum;
+  
+  @EndUserText.label: 'DriverName'
+  @UI.identification: [ {
+    position: 40 , 
+    label: 'DriverName'
+  } ]
+  @UI.lineItem: [ {
+    position: 40 , 
+    label: 'DriverName'
+  } ]
+  @UI.selectionField: [ {
+    position: 40 
+  } ]
+  DriverName;
+  
+  @EndUserText.label: 'Plant'
+  @UI.identification: [ {
+    position: 50 , 
+    label: 'Plant'
+  } ]
+  @UI.lineItem: [ {
+    position: 50 , 
+    label: 'Plant'
+  } ]
+  @UI.selectionField: [ {
+    position: 50 
+  } ]
+  Plant;
+  
+  @EndUserText.label: 'Location'
+  @UI.identification: [ {
+    position: 60 , 
+    label: 'Location'
+  } ]
+  @UI.lineItem: [ {
+    position: 60 , 
+    label: 'Location'
+  } ]
+  @UI.selectionField: [ {
+    position: 60 
+  } ]
+  Location;
+  
+  @EndUserText.label: 'TravelDate'
+  @UI.identification: [ {
+    position: 70 , 
+    label: 'TravelDate'
+  } ]
+  @UI.lineItem: [ {
+    position: 70 , 
+    label: 'TravelDate'
+  } ]
+  @UI.selectionField: [ {
+    position: 70 
+  } ]
+  TravelDate;
+  
+ @EndUserText.label: 'GateStatus'
+  @UI: {
+      lineItem:       [ { position: 80, importance: #HIGH },
+                        { type: #FOR_ACTION, dataAction: 'acceptTransit', label: 'Accept Transit',invocationGrouping: #ISOLATED } ],
+      identification: [ { position: 80, label: 'Status [O(Open)|A(Accepted)|X(Canceled)]' } ]  }
+    GateStatus;
+  
+  
+  @UI.identification: [ {
+    position: 90 
+  } ]
+  @UI.lineItem: [ {
+    position: 90 
+  } ]
+  LastchangedAt;
+    
+}
